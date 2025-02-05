@@ -16,7 +16,7 @@ public class CarSchema {
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "CarSchema{" +
                 "id=" + id +
                 ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
