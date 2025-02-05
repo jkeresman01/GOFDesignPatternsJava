@@ -9,7 +9,7 @@ public class VehicleCache {
 
     public VehicleCache() {
         Vehicle buggati = new Car();
-        Vehicle mercedes =  new Bus();
+        Vehicle mercedes =  new Car();
 
         cache.put("Buggati Chiron", buggati);
         cache.put("Mercedes Setra", mercedes);
