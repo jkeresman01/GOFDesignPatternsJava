@@ -2,9 +2,17 @@ package com.keresman.gof.facade;
 
 public class CryptoFacade {
 
+    private DatabaseService databaseService;
+    private MailService mailService;
+    private CryptoService cryptoService;
+
+    public CryptoFacade() {
+        this.databaseService = new DatabaseService();
+        this.mailService = new MailService();
+    }
+
     public void buyCrypto(double amount, String currency) {
-        DatabaseService dbService = new DatabaseService();
-        User user = dbService.getUserById(UIService.getLoggedInUserId());
+        User user = databaseService.getUserById(UIService.getLoggedInUserId());
 
         boolean userHasSufficientBalance = user.balance().doubleValue() >= amount;
 
@@ -13,10 +21,9 @@ public class CryptoFacade {
             return;
         }
 
-        CryptoService cryptoService = CrypoServiceFactory.getInstance(currency);
+        cryptoService = CrypoServiceFactory.getInstance(currency);
         cryptoService.buyCurrenscy(user, amount);
 
-        MailService mailService = new MailService();
         mailService.sendMail(user);
 
         System.out.printf("User %s have bought %.2f crypto.\n", user, amount);
