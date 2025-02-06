@@ -2,11 +2,11 @@ package com.keresman.gof.abstractfactory;
 
 public class Main {
     public static void main(String[] args) {
-        msiExample();
-        asusExample();
+        exampleMsi();
+        exampleAsus();
     }
 
-    private static void msiExample() {
+    private static void exampleMsi() {
         Company msi = new MsiManufacturer();
         Gpu msiGpu = msi.createGpu();
         Monitor msiMonitor = msi.createMonitor();
@@ -15,7 +15,7 @@ public class Main {
         System.out.println(msiMonitor);
     }
 
-    private static void asusExample() {
+    private static void exampleAsus() {
         Company asus = new AsusManufacturer();
         Gpu asusGpu = asus.createGpu();
         Monitor asusMonitor = asus.createMonitor();
