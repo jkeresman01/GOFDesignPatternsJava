@@ -9,13 +9,13 @@ public class DiabloLoader extends GameLoader {
     }
 
     @Override
-    public void createObjects() {
+    public void createObjects(byte[] data) {
         System.out.println("Creating Diablo objects ...");
         // Some Diablo Code ...
     }
 
     @Override
-    public void downloadAllAditionalFiles() {
+    public void downloadAllAdditionalFiles() {
         System.out.println("Downloading Diablo files ...");
         // Some Diablo Code ...
     }

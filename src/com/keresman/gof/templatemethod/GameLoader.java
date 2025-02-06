@@ -4,8 +4,8 @@ public abstract class GameLoader {
 
     public void load() {
         byte[] data = loadLocalDate();
-        createObjects();
-        downloadAllAditionalFiles();
+        createObjects(data);
+        downloadAllAdditionalFiles();
         cleanTempFiles();
         initializeProfiles();
     }
@@ -16,7 +16,7 @@ public abstract class GameLoader {
     }
 
     public abstract byte[] loadLocalDate();
-    public abstract void createObjects();
-    public abstract void downloadAllAditionalFiles();
+    public abstract void createObjects(byte[] data);
+    public abstract void downloadAllAdditionalFiles();
     public abstract void initializeProfiles();
 }

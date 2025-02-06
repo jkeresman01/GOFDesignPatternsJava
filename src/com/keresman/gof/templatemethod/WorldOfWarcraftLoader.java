@@ -9,13 +9,13 @@ public class WorldOfWarcraftLoader extends GameLoader {
     }
 
     @Override
-    public void createObjects() {
+    public void createObjects(byte[] data) {
         System.out.println("Creating WoW objects ...");
         // Some WoW Code ...
     }
 
     @Override
-    public void downloadAllAditionalFiles() {
+    public void downloadAllAdditionalFiles() {
         System.out.println("Downloading WoW files ...");
         // Some WoW Code ...
     }
