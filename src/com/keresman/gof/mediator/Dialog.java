@@ -10,6 +10,11 @@ public class Dialog implements Mediator {
     private final LoginButton loginButton = new LoginButton();
     private final ForgotPasswordButton passwordButton = new ForgotPasswordButton();
 
+    public Dialog() {
+        loginButton.setMediator(this);
+        passwordButton.setMediator(this);
+    }
+
     @Override
     public void login() {
         String user = userTextBox.getText();
