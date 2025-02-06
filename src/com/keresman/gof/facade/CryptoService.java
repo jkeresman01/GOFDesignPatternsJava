@@ -5,5 +5,5 @@ public abstract class CryptoService {
     private DatabaseService databaseService;
 
 
-    public abstract void buyCurrenscy(User user, double amount);
+    public abstract void buyCurrency(User user, double amount);
 }

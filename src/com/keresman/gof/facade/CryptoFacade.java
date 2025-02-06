@@ -22,7 +22,7 @@ public class CryptoFacade {
         }
 
         cryptoService = CrypoServiceFactory.getInstance(currency);
-        cryptoService.buyCurrenscy(user, amount);
+        cryptoService.buyCurrency(user, amount);
 
         mailService.sendMail(user);
 
