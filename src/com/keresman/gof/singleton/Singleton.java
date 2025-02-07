@@ -10,7 +10,7 @@ public class Singleton {
         this.data = data;
     }
 
-    public static Singleton getInstance(String data ) {
+    public static Singleton getInstance(String data) {
         Singleton result = instance;
 
         if(result == null) {
